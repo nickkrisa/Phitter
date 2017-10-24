@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+  <body>
+    <div id="navbar">
+      <ul class="nav container">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/?lang=en">
+            <img class="nav-img" src="images/twitter.svg" alt="">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://about.twitter.com/">About</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="login container">
+      <div class="inner-login">
+        <h1>Log in to Twitter</h1>
+        <div class="form-group">
+          <div class="input-wrapper"><input type="email" class="form-control" placeholder="Phone, email or username"></div>
+          <div class="input-wrapper"><input type="password" class="form-control" placeholder="Password"></div>
+      </div>
+        <div class="remember-wrapper">
+          <button type="button" class="remember-btn btn-primary" onClick="Alert()">Log in</button>
+          <div class="remember"><input class="form-check-input" type="checkbox" value=""></input><span>Remember me ·</span></div><a href="https://twitter.com/account/begin_password_reset"> Forgot password?</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="login-footer container">
+      <p>New to Twitter? <a href="https://twitter.com/signup">Sign up now »</a></p>
+      <p>Already using Twitter via text message? <a href="https://twitter.com/account/complete">Activate your account »</a></p>
+    </div>
+
+    <div id="stolen" class="alert alert-danger container" role="alert" style="display: none;">Your information has been stolen :(</div>
+
+    <script type="text/javascript">
+      var isAlerting = false
+      function Alert() {
+        if (isAlerting) {
+          document.getElementById("stolen").style.display = "none";
+          isAlerting = false;
+        }
+        else {
+          document.getElementById("stolen").style.display = "";
+          isAlerting = true;
+        }
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
